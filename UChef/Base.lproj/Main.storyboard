@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,46 +17,819 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SrT-1h-Cz2">
-                                <rect key="frame" x="20" y="292" width="374" height="280"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UCHEF" translatesAutoresizingMaskIntoConstraints="NO" id="PUQ-ip-ofU">
+                                <rect key="frame" x="175" y="49" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="juy-8p-wKA"/>
+                                    <constraint firstAttribute="height" constant="64" id="zoV-ya-lSg"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ll6-WF-9na">
-                                <rect key="frame" x="20" y="117" width="374" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eI6-KU-2cn">
-                                <rect key="frame" x="94" y="580" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Scan receipt"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="9Ko-OL-Kp7">
+                                <rect key="frame" x="20" y="183" width="294" height="429"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="GENERATE RECIPE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="tlF-5n-vCJ" kind="show" id="7Pw-Td-Lfb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eI6-KU-2cn">
+                                <rect key="frame" x="264" y="562" width="130" height="200"/>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.32941176470588235" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="UPDATE PANTRY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pOj-0V-e99"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ko-OL-Kp7">
-                                <rect key="frame" x="226" y="580" width="110" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Generate recipe"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hr8-Uu-icQ">
+                                <rect key="frame" x="25" y="62" width="41" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="F66-uO-UH9"/>
+                                    <constraint firstAttribute="width" constant="41" id="JBU-xr-1pD"/>
+                                </constraints>
+                                <color key="tintColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="folder.fill" catalog="system"/>
                                 <connections>
-                                    <action selector="generateRecipe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uas-kw-LU3"/>
+                                    <segue destination="Eoc-fu-Qbp" kind="show" id="xfi-73-8kT"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Ko-OL-Kp7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1CS-8d-dje"/>
+                            <constraint firstItem="eI6-KU-2cn" firstAttribute="top" secondItem="9Ko-OL-Kp7" secondAttribute="bottom" constant="-50" id="8OE-aE-kVH"/>
+                            <constraint firstItem="eI6-KU-2cn" firstAttribute="leading" secondItem="9Ko-OL-Kp7" secondAttribute="trailing" constant="-50" id="9bC-RP-Wh3"/>
+                            <constraint firstItem="hr8-Uu-icQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="GyM-br-SZz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eI6-KU-2cn" secondAttribute="trailing" constant="20" id="N7H-Wn-D5o"/>
+                            <constraint firstItem="PUQ-ip-ofU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q41-lN-jrf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Ko-OL-Kp7" secondAttribute="bottom" constant="250" id="Ujl-jq-u0p"/>
+                            <constraint firstItem="hr8-Uu-icQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="YuK-QR-GQE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eI6-KU-2cn" secondAttribute="bottom" constant="100" id="aAJ-3m-Th6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Ko-OL-Kp7" secondAttribute="trailing" constant="100" id="b8p-NL-wVy"/>
+                            <constraint firstItem="PUQ-ip-ofU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="haU-ZG-XME"/>
+                            <constraint firstItem="9Ko-OL-Kp7" firstAttribute="top" secondItem="PUQ-ip-ofU" secondAttribute="bottom" constant="70" id="jvx-rY-G59"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="AnQ-hO-whG"/>
                     <connections>
-                        <outlet property="imageView" destination="SrT-1h-Cz2" id="U9g-vi-mwW"/>
-                        <outlet property="textView" destination="ll6-WF-9na" id="UJH-5P-7o7"/>
+                        <outlet property="generateButton" destination="9Ko-OL-Kp7" id="bbc-cM-kuu"/>
+                        <outlet property="scanButton" destination="eI6-KU-2cn" id="VKw-80-IXj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
+        <!--Inventory Table View Controller-->
+        <scene sceneID="jKs-xL-otD">
+            <objects>
+                <tableViewController id="Eoc-fu-Qbp" customClass="InventoryTableViewController" customModule="UChef" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GgF-X0-Xwn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="urE-he-Ts0">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="urE-he-Ts0" id="WcS-TD-eKa">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Eoc-fu-Qbp" id="uVa-vM-wHH"/>
+                            <outlet property="delegate" destination="Eoc-fu-Qbp" id="Ev1-AK-eWN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="YD0-kZ-5Mp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bah-bx-hGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="-177"/>
+        </scene>
+        <!--Cuisne Pop Up View Controller-->
+        <scene sceneID="6rQ-bb-RJT">
+            <objects>
+                <viewController id="tlF-5n-vCJ" customClass="CuisnePopUpViewController" customModule="UChef" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IM1-80-oV3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFP-1K-vTS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXy-Jy-6Pt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="909"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4I-gJ-JV6" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="235" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="britishChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="goO-Pm-gSP"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxd-sR-YXs" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="361" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="europeanChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="6fd-gR-cC1"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dutch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmh-oU-Vn1">
+                                                <rect key="frame" x="110" y="323" width="46" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSh-3u-Tna">
+                                                <rect key="frame" x="110" y="790" width="33" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLj-o4-zfO" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="697" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="moroccanChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="4iy-dS-qGn"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yf-zB-ZkR">
+                                                <rect key="frame" x="110" y="409" width="53" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9q7-ta-WvF" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="109" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="africanChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="68m-gd-Cl8"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mediterranean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="src-3h-Lsx">
+                                                <rect key="frame" x="110" y="580" width="111" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkh-w0-0O6" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="193" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="asianChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="DNQ-Io-uQQ"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="African" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvR-55-cgd">
+                                                <rect key="frame" x="110" y="108" width="54" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLY-Me-YIS" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="739" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="swedishChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="KHK-Gs-Ovv"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="British" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sc-SD-Wp3">
+                                                <rect key="frame" x="110" y="237" width="49" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vk7-0t-m5z" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="277" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="caribbeanChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="8T2-Dr-OFq"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="American" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjP-nG-JA8">
+                                                <rect key="frame" x="110" y="151" width="72" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moroccan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1A-aM-7eZ">
+                                                <rect key="frame" x="110" y="706" width="77" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ss-aC-dAJ" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="319" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dutchChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="e1Z-nv-WwQ"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Middle Eastern" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgE-gI-jSb">
+                                                <rect key="frame" x="110" y="664" width="114" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOb-jg-Yr1" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="445" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="indianChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="ufz-d0-ydj"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8j-6a-E5X">
+                                                <rect key="frame" x="110" y="194" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdc-fa-z8l">
+                                                <rect key="frame" x="110" y="452" width="46" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="European" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyQ-0G-aKo">
+                                                <rect key="frame" x="110" y="366" width="73" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-vQ-pKP" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="529" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="italianChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="3tR-gx-etj"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQT-m6-eKq" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="487" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="irishChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="idf-aC-fva"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swedish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAi-08-iMJ">
+                                                <rect key="frame" x="110" y="748" width="64" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Wv-Hi-1IL" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="151" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="americanChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="8QN-lb-CyJ"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Irish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQH-8d-SxL">
+                                                <rect key="frame" x="110" y="495" width="32" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fK2-cO-ZR4" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="403" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="frenchChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="2RN-lS-JoH"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mexican" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZo-on-R58">
+                                                <rect key="frame" x="110" y="622" width="64" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caribbean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQJ-aW-j0b">
+                                                <rect key="frame" x="110" y="280" width="79" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDa-rv-GD5" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="571" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="mediterraneanChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="wVx-hF-odK"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNl-eS-xLc" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="613" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="mexicanChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="lco-rW-NfE"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Italian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4G-hs-Ft6">
+                                                <rect key="frame" x="110" y="538" width="45" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A17-8m-4K0" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="781" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="thaiChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="71Y-A5-Qem"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTQ-iN-xfr" customClass="BEMCheckBox">
+                                                <rect key="frame" x="285" y="655" width="19" height="21"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="middleEasternChecked:" destination="tlF-5n-vCJ" eventType="valueChanged" id="Ckd-uc-idQ"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your cuisine preferences:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tu3-0E-V9O">
+                                                <rect key="frame" x="0.0" y="50" width="414" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.99215686270000003" green="0.56078431370000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbi-Sy-VVZ">
+                                                <rect key="frame" x="131" y="845" width="152" height="30"/>
+                                                <color key="backgroundColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Check Recipe">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="confirmed:" destination="tlF-5n-vCJ" eventType="touchUpInside" id="2o2-VT-zhc"/>
+                                                    <segue destination="GH2-U6-rD3" kind="show" identifier="preferenceToRecipe" id="FZk-Q9-OoI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Fxd-sR-YXs" firstAttribute="top" secondItem="9ss-aC-dAJ" secondAttribute="bottom" constant="21" id="0Ax-tF-94I"/>
+                                            <constraint firstItem="uTQ-iN-xfr" firstAttribute="top" secondItem="eNl-eS-xLc" secondAttribute="bottom" constant="21" id="5vy-fu-USz"/>
+                                            <constraint firstItem="YLj-o4-zfO" firstAttribute="top" secondItem="uTQ-iN-xfr" secondAttribute="bottom" constant="21" id="67F-CG-abi"/>
+                                            <constraint firstItem="vyQ-0G-aKo" firstAttribute="top" secondItem="fmh-oU-Vn1" secondAttribute="bottom" constant="22" id="6jL-vR-NLA"/>
+                                            <constraint firstItem="sdc-fa-z8l" firstAttribute="top" secondItem="4yf-zB-ZkR" secondAttribute="bottom" constant="22" id="76q-wS-4uR"/>
+                                            <constraint firstItem="9Wv-Hi-1IL" firstAttribute="top" secondItem="9q7-ta-WvF" secondAttribute="bottom" constant="21" id="7v0-ig-AZh"/>
+                                            <constraint firstItem="BQJ-aW-j0b" firstAttribute="top" secondItem="2sc-SD-Wp3" secondAttribute="bottom" constant="22" id="8RP-6G-ic9"/>
+                                            <constraint firstAttribute="trailing" secondItem="UOb-jg-Yr1" secondAttribute="trailing" constant="110" id="9dN-Rp-ecc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fxd-sR-YXs" secondAttribute="trailing" constant="110" id="AAr-2X-5Bb"/>
+                                            <constraint firstItem="GQH-8d-SxL" firstAttribute="top" secondItem="sdc-fa-z8l" secondAttribute="bottom" constant="22" id="Bis-29-2gd"/>
+                                            <constraint firstItem="A17-8m-4K0" firstAttribute="top" secondItem="jLY-Me-YIS" secondAttribute="bottom" constant="21" id="DJJ-fy-nGS"/>
+                                            <constraint firstAttribute="trailing" secondItem="uTQ-iN-xfr" secondAttribute="trailing" constant="110" id="DKB-w1-9pB"/>
+                                            <constraint firstItem="y1A-aM-7eZ" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="EoP-Pi-zI4"/>
+                                            <constraint firstAttribute="trailing" secondItem="vk7-0t-m5z" secondAttribute="trailing" constant="110" id="Fai-cK-pAv"/>
+                                            <constraint firstItem="jjP-nG-JA8" firstAttribute="top" secondItem="gvR-55-cgd" secondAttribute="bottom" constant="22" id="Fuj-7O-dJu"/>
+                                            <constraint firstItem="fmh-oU-Vn1" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="Fun-x0-fMx"/>
+                                            <constraint firstAttribute="trailing" secondItem="9ss-aC-dAJ" secondAttribute="trailing" constant="110" id="HQf-XW-Oqk"/>
+                                            <constraint firstItem="4yf-zB-ZkR" firstAttribute="top" secondItem="vyQ-0G-aKo" secondAttribute="bottom" constant="22" id="HW7-NL-UHf"/>
+                                            <constraint firstItem="jLY-Me-YIS" firstAttribute="top" secondItem="YLj-o4-zfO" secondAttribute="bottom" constant="21" id="INT-VA-H7z"/>
+                                            <constraint firstAttribute="trailing" secondItem="pu5-vQ-pKP" secondAttribute="trailing" constant="110" id="IOX-Pb-uAp"/>
+                                            <constraint firstItem="n4I-gJ-JV6" firstAttribute="top" secondItem="xkh-w0-0O6" secondAttribute="bottom" constant="21" id="K9D-0h-SKb"/>
+                                            <constraint firstItem="aZo-on-R58" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="KJO-cl-kBT"/>
+                                            <constraint firstItem="gvR-55-cgd" firstAttribute="top" secondItem="tu3-0E-V9O" secondAttribute="bottom" constant="34" id="MnH-z4-Jn7"/>
+                                            <constraint firstItem="vk7-0t-m5z" firstAttribute="top" secondItem="n4I-gJ-JV6" secondAttribute="bottom" constant="21" id="Msj-zP-C1t"/>
+                                            <constraint firstItem="V8j-6a-E5X" firstAttribute="top" secondItem="jjP-nG-JA8" secondAttribute="bottom" constant="22" id="NUU-GV-G4P"/>
+                                            <constraint firstAttribute="trailing" secondItem="fK2-cO-ZR4" secondAttribute="trailing" constant="110" id="O42-gb-NsX"/>
+                                            <constraint firstAttribute="trailing" secondItem="OQT-m6-eKq" secondAttribute="trailing" constant="110" id="OKf-F5-vmj"/>
+                                            <constraint firstAttribute="trailing" secondItem="tu3-0E-V9O" secondAttribute="trailing" id="OZ1-w1-KRb"/>
+                                            <constraint firstItem="YgE-gI-jSb" firstAttribute="top" secondItem="aZo-on-R58" secondAttribute="bottom" constant="21" id="Oi5-Vv-gex"/>
+                                            <constraint firstAttribute="trailing" secondItem="pbi-Sy-VVZ" secondAttribute="trailing" constant="131" id="OoF-yh-E9d"/>
+                                            <constraint firstItem="V4G-hs-Ft6" firstAttribute="top" secondItem="GQH-8d-SxL" secondAttribute="bottom" constant="22" id="Q1R-ur-wyL"/>
+                                            <constraint firstItem="YgE-gI-jSb" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="R4f-8C-se7"/>
+                                            <constraint firstItem="BQJ-aW-j0b" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="RAQ-ku-Hx2"/>
+                                            <constraint firstItem="eNl-eS-xLc" firstAttribute="top" secondItem="sDa-rv-GD5" secondAttribute="bottom" constant="21" id="RUu-98-kxh"/>
+                                            <constraint firstItem="pbi-Sy-VVZ" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="131" id="U0E-Re-ccj"/>
+                                            <constraint firstItem="9ss-aC-dAJ" firstAttribute="top" secondItem="vk7-0t-m5z" secondAttribute="bottom" constant="21" id="UxT-JP-z0L"/>
+                                            <constraint firstAttribute="trailing" secondItem="sDa-rv-GD5" secondAttribute="trailing" constant="110" id="Vzt-Ni-RIM"/>
+                                            <constraint firstItem="UOb-jg-Yr1" firstAttribute="top" secondItem="fK2-cO-ZR4" secondAttribute="bottom" constant="21" id="WKi-Qd-LyQ"/>
+                                            <constraint firstItem="2sc-SD-Wp3" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="WOb-WT-hGW"/>
+                                            <constraint firstItem="OQT-m6-eKq" firstAttribute="top" secondItem="UOb-jg-Yr1" secondAttribute="bottom" constant="21" id="WgS-eA-SNT"/>
+                                            <constraint firstItem="QAi-08-iMJ" firstAttribute="top" secondItem="y1A-aM-7eZ" secondAttribute="bottom" constant="21" id="WhN-yf-0bq"/>
+                                            <constraint firstItem="y1A-aM-7eZ" firstAttribute="top" secondItem="YgE-gI-jSb" secondAttribute="bottom" constant="21" id="WoA-C2-4Lk"/>
+                                            <constraint firstItem="V8j-6a-E5X" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="X0b-6l-WfV"/>
+                                            <constraint firstItem="9q7-ta-WvF" firstAttribute="top" secondItem="tu3-0E-V9O" secondAttribute="bottom" constant="35" id="XvR-nk-Tf8"/>
+                                            <constraint firstItem="vyQ-0G-aKo" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="YIs-XZ-a86"/>
+                                            <constraint firstItem="QSh-3u-Tna" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="YsG-MP-sM6"/>
+                                            <constraint firstItem="sDa-rv-GD5" firstAttribute="top" secondItem="pu5-vQ-pKP" secondAttribute="bottom" constant="21" id="ZCO-vk-M6a"/>
+                                            <constraint firstAttribute="trailing" secondItem="jLY-Me-YIS" secondAttribute="trailing" constant="110" id="aB8-7U-TZJ"/>
+                                            <constraint firstItem="GQH-8d-SxL" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="aOG-EP-eFp"/>
+                                            <constraint firstAttribute="trailing" secondItem="YLj-o4-zfO" secondAttribute="trailing" constant="110" id="bFZ-Kf-ZUE"/>
+                                            <constraint firstAttribute="trailing" secondItem="eNl-eS-xLc" secondAttribute="trailing" constant="110" id="bqe-Sm-9gZ"/>
+                                            <constraint firstItem="pbi-Sy-VVZ" firstAttribute="top" secondItem="QSh-3u-Tna" secondAttribute="bottom" constant="34" id="cdQ-YH-AEL"/>
+                                            <constraint firstAttribute="trailing" secondItem="xkh-w0-0O6" secondAttribute="trailing" constant="110" id="d0Y-n3-PXj"/>
+                                            <constraint firstItem="QSh-3u-Tna" firstAttribute="top" secondItem="QAi-08-iMJ" secondAttribute="bottom" constant="21" id="dei-B5-oKv"/>
+                                            <constraint firstItem="tu3-0E-V9O" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" id="eGg-0Y-YMl"/>
+                                            <constraint firstItem="src-3h-Lsx" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="eIK-VU-lVw"/>
+                                            <constraint firstItem="pu5-vQ-pKP" firstAttribute="top" secondItem="OQT-m6-eKq" secondAttribute="bottom" constant="21" id="gXS-es-659"/>
+                                            <constraint firstAttribute="trailing" secondItem="9q7-ta-WvF" secondAttribute="trailing" constant="110" id="gm2-6c-vHv"/>
+                                            <constraint firstItem="2sc-SD-Wp3" firstAttribute="top" secondItem="V8j-6a-E5X" secondAttribute="bottom" constant="22" id="gxZ-MW-Qn4"/>
+                                            <constraint firstAttribute="trailing" secondItem="A17-8m-4K0" secondAttribute="trailing" constant="110" id="h9e-ka-o7b"/>
+                                            <constraint firstItem="sdc-fa-z8l" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="hPk-K1-1GL"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Wv-Hi-1IL" secondAttribute="trailing" constant="110" id="jYV-HS-CuD"/>
+                                            <constraint firstItem="src-3h-Lsx" firstAttribute="top" secondItem="V4G-hs-Ft6" secondAttribute="bottom" constant="21" id="lyS-S7-BKF"/>
+                                            <constraint firstItem="QAi-08-iMJ" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="m5m-Ne-tqm"/>
+                                            <constraint firstItem="fK2-cO-ZR4" firstAttribute="top" secondItem="Fxd-sR-YXs" secondAttribute="bottom" constant="21" id="njB-Vh-lI0"/>
+                                            <constraint firstItem="jjP-nG-JA8" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="tMV-J1-ni8"/>
+                                            <constraint firstItem="tu3-0E-V9O" firstAttribute="top" secondItem="uXy-Jy-6Pt" secondAttribute="top" constant="50" id="uaR-t7-VdE"/>
+                                            <constraint firstItem="aZo-on-R58" firstAttribute="top" secondItem="src-3h-Lsx" secondAttribute="bottom" constant="21" id="v0m-0H-HqD"/>
+                                            <constraint firstItem="gvR-55-cgd" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="vJO-cI-w8w"/>
+                                            <constraint firstItem="xkh-w0-0O6" firstAttribute="top" secondItem="9Wv-Hi-1IL" secondAttribute="bottom" constant="21" id="w2m-fN-lcQ"/>
+                                            <constraint firstItem="4yf-zB-ZkR" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="wFn-cp-cqJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="pbi-Sy-VVZ" secondAttribute="bottom" constant="34" id="xI7-BZ-8Eh"/>
+                                            <constraint firstItem="V4G-hs-Ft6" firstAttribute="leading" secondItem="uXy-Jy-6Pt" secondAttribute="leading" constant="110" id="xpl-8Q-RHN"/>
+                                            <constraint firstItem="fmh-oU-Vn1" firstAttribute="top" secondItem="BQJ-aW-j0b" secondAttribute="bottom" constant="22" id="y1V-zE-Jhb"/>
+                                            <constraint firstAttribute="trailing" secondItem="n4I-gJ-JV6" secondAttribute="trailing" constant="110" id="z6P-fH-d3n"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uXy-Jy-6Pt" firstAttribute="trailing" secondItem="zcY-sa-tTd" secondAttribute="trailing" id="7eN-pV-FRk"/>
+                                    <constraint firstItem="uXy-Jy-6Pt" firstAttribute="top" secondItem="zcY-sa-tTd" secondAttribute="top" id="J2V-xK-UDo"/>
+                                    <constraint firstItem="uXy-Jy-6Pt" firstAttribute="bottom" secondItem="zcY-sa-tTd" secondAttribute="bottom" id="Ss9-AF-a0E"/>
+                                    <constraint firstItem="uXy-Jy-6Pt" firstAttribute="leading" secondItem="zcY-sa-tTd" secondAttribute="leading" id="q4c-98-bIK"/>
+                                    <constraint firstItem="uXy-Jy-6Pt" firstAttribute="width" secondItem="ngt-GX-KLF" secondAttribute="width" id="x7O-xd-Xhc"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zcY-sa-tTd"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ngt-GX-KLF"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F7X-ko-sCo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AFP-1K-vTS" firstAttribute="top" secondItem="IM1-80-oV3" secondAttribute="top" id="4PS-ZB-9rR"/>
+                            <constraint firstItem="AFP-1K-vTS" firstAttribute="trailing" secondItem="F7X-ko-sCo" secondAttribute="trailing" id="Gye-8x-ENh"/>
+                            <constraint firstItem="AFP-1K-vTS" firstAttribute="leading" secondItem="F7X-ko-sCo" secondAttribute="leading" id="TFa-Dv-sr0"/>
+                            <constraint firstAttribute="bottom" secondItem="AFP-1K-vTS" secondAttribute="bottom" id="lYS-ZW-v59"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Mo-uz-sT5"/>
+                    <connections>
+                        <outlet property="africanCheck" destination="9q7-ta-WvF" id="NEo-BD-gvy"/>
+                        <outlet property="americanCheck" destination="9Wv-Hi-1IL" id="Jgu-nX-W1e"/>
+                        <outlet property="asianCheck" destination="xkh-w0-0O6" id="AQG-ka-O1A"/>
+                        <outlet property="britishCheck" destination="n4I-gJ-JV6" id="OoI-3F-8Ze"/>
+                        <outlet property="caribbeanCheck" destination="vk7-0t-m5z" id="Pp4-I4-g7m"/>
+                        <outlet property="confirmButton" destination="pbi-Sy-VVZ" id="Ycp-VK-1S2"/>
+                        <outlet property="dutchCheck" destination="9ss-aC-dAJ" id="YJk-ci-FMz"/>
+                        <outlet property="europeanCheck" destination="Fxd-sR-YXs" id="m7B-Zh-6co"/>
+                        <outlet property="frenchCheck" destination="fK2-cO-ZR4" id="Mjm-GQ-fqS"/>
+                        <outlet property="indianCheck" destination="UOb-jg-Yr1" id="yEV-TR-BKp"/>
+                        <outlet property="irishCheck" destination="OQT-m6-eKq" id="hE6-Dr-Kqt"/>
+                        <outlet property="italianCheck" destination="pu5-vQ-pKP" id="QYC-jX-v39"/>
+                        <outlet property="mediterraneanCheck" destination="sDa-rv-GD5" id="DNX-mi-9Nq"/>
+                        <outlet property="mexicanCheck" destination="eNl-eS-xLc" id="36W-y5-DFO"/>
+                        <outlet property="middleEasternCheck" destination="uTQ-iN-xfr" id="alr-Nf-E9t"/>
+                        <outlet property="moroccanCheck" destination="YLj-o4-zfO" id="SeG-Rs-gRl"/>
+                        <outlet property="swedishCheck" destination="jLY-Me-YIS" id="mK3-5j-C9X"/>
+                        <outlet property="thaiCheck" destination="A17-8m-4K0" id="U0z-Wc-T6U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Si-K2-nfZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910.14492753623199" y="515.625"/>
+        </scene>
+        <!--Recipe Table View Controller-->
+        <scene sceneID="jM2-ct-EO1">
+            <objects>
+                <tableViewController id="GH2-U6-rD3" customClass="RecipeTableViewController" customModule="UChef" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FpT-qJ-YXp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vOc-4e-EIo">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vOc-4e-EIo" id="NYQ-Xb-cMs">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="w6P-ev-lTX" kind="show" identifier="cellToWeb" id="STu-UQ-3Up"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GH2-U6-rD3" id="2Fq-1L-1ft"/>
+                            <outlet property="delegate" destination="GH2-U6-rD3" id="Cje-DT-lqz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="abL-RE-l4d"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IgN-LV-OHs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="516"/>
+        </scene>
+        <!--Back-->
+        <scene sceneID="KsR-vL-HKK">
+            <objects>
+                <viewController id="w6P-ev-lTX" customClass="WebViewController" customModule="UChef" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kdw-L4-HAQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azh-Jg-QOI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ObK-7o-aQ1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Back" id="ZFy-MR-9aG"/>
+                    <connections>
+                        <outlet property="webView" destination="azh-Jg-QOI" id="znB-gp-ffQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vlZ-Pb-W44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2571" y="516"/>
+        </scene>
     </scenes>
+    <designables>
+        <designable name="9Wv-Hi-1IL">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="9q7-ta-WvF">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="9ss-aC-dAJ">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="A17-8m-4K0">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="Fxd-sR-YXs">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="OQT-m6-eKq">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="UOb-jg-Yr1">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="YLj-o4-zfO">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="eNl-eS-xLc">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="fK2-cO-ZR4">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="jLY-Me-YIS">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="n4I-gJ-JV6">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="pu5-vQ-pKP">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="sDa-rv-GD5">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="uTQ-iN-xfr">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="vk7-0t-m5z">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+        <designable name="xkh-w0-0O6">
+            <size key="intrinsicContentSize" width="19" height="21"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="UCHEF" width="1500" height="1500"/>
+        <image name="folder.fill" catalog="system" width="128" height="97"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

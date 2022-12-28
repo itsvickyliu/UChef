@@ -3,10 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0842F024C8C5A600FC5838 /* CuisnePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0842EF24C8C5A600FC5838 /* CuisnePopUpViewController.swift */; };
+		2C233FC124C4DEB500737E1A /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C233FBF24C4DEB500737E1A /* RecipeTableViewCell.swift */; };
+		2C233FC224C4DEB500737E1A /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C233FC024C4DEB500737E1A /* RecipeTableViewCell.xib */; };
+		2C233FC424C4E45800737E1A /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C233FC324C4E45800737E1A /* RecipeTableViewController.swift */; };
+		2C5BCB8124C50240008379EA /* InventoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5BCB8024C50240008379EA /* InventoryTableViewController.swift */; };
+		2C5BCB8524C51063008379EA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5BCB8424C51063008379EA /* WebViewController.swift */; };
+		2C5BCB8724C51544008379EA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5BCB8624C51544008379EA /* WebKit.framework */; };
+		2CB91A8124C388530013941D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB91A8024C388530013941D /* GoogleService-Info.plist */; };
+		2CD3B29E24C86B2200108845 /* AddedInventoryPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD3B29D24C86B2200108845 /* AddedInventoryPopUpView.swift */; };
 		2CD931ED24C1CF0D003281BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD931EC24C1CF0D003281BE /* AppDelegate.swift */; };
 		2CD931EF24C1CF0E003281BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD931EE24C1CF0E003281BE /* SceneDelegate.swift */; };
 		2CD931F124C1CF0E003281BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD931F024C1CF0E003281BE /* ViewController.swift */; };
@@ -15,6 +24,10 @@
 		2CD931F924C1CF0E003281BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CD931F724C1CF0E003281BE /* LaunchScreen.storyboard */; };
 		2CD9320424C1CF0E003281BE /* UChefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9320324C1CF0E003281BE /* UChefTests.swift */; };
 		2CD9320F24C1CF0E003281BE /* UChefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9320E24C1CF0E003281BE /* UChefUITests.swift */; };
+		2CEB97E724CA47D2004397B3 /* AddedIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB97E624CA47D2004397B3 /* AddedIngredientViewController.swift */; };
+		8AD70E02CDCCAB55E4113855 /* Pods_UChef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449923F2141513D45D7B39CC /* Pods_UChef.framework */; };
+		B08F8FFCBBB0761B855B8738 /* Pods_UChefTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C4C50487538A2BED2227C3 /* Pods_UChefTests.framework */; };
+		C89E2C208156A59E2D012803 /* Pods_UChef_UChefUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9341575CDDAC0910426C70 /* Pods_UChef_UChefUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +48,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06783D0C3497E21CFEBB0E40 /* Pods-UChef-UChefUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UChef-UChefUITests.release.xcconfig"; path = "Target Support Files/Pods-UChef-UChefUITests/Pods-UChef-UChefUITests.release.xcconfig"; sourceTree = "<group>"; };
+		086467FBC1E303455CD9FC3D /* Pods-UChef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UChef.debug.xcconfig"; path = "Target Support Files/Pods-UChef/Pods-UChef.debug.xcconfig"; sourceTree = "<group>"; };
+		12C4C50487538A2BED2227C3 /* Pods_UChefTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UChefTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0842EF24C8C5A600FC5838 /* CuisnePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisnePopUpViewController.swift; sourceTree = "<group>"; };
+		2C233FBF24C4DEB500737E1A /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		2C233FC024C4DEB500737E1A /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		2C233FC324C4E45800737E1A /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		2C5BCB8024C50240008379EA /* InventoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewController.swift; sourceTree = "<group>"; };
+		2C5BCB8424C51063008379EA /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		2C5BCB8624C51544008379EA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		2CB91A8024C388530013941D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2CD3B29D24C86B2200108845 /* AddedInventoryPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedInventoryPopUpView.swift; sourceTree = "<group>"; };
 		2CD931E924C1CF0D003281BE /* UChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD931EC24C1CF0D003281BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CD931EE24C1CF0E003281BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +74,13 @@
 		2CD9320A24C1CF0E003281BE /* UChefUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UChefUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD9320E24C1CF0E003281BE /* UChefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UChefUITests.swift; sourceTree = "<group>"; };
 		2CD9321024C1CF0F003281BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CEB97E624CA47D2004397B3 /* AddedIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedIngredientViewController.swift; sourceTree = "<group>"; };
+		449923F2141513D45D7B39CC /* Pods_UChef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UChef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46CBCB5F28FC9F93DC743777 /* Pods-UChefTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UChefTests.release.xcconfig"; path = "Target Support Files/Pods-UChefTests/Pods-UChefTests.release.xcconfig"; sourceTree = "<group>"; };
+		5E9341575CDDAC0910426C70 /* Pods_UChef_UChefUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UChef_UChefUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A110458F24FECA5590C88C25 /* Pods-UChef-UChefUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UChef-UChefUITests.debug.xcconfig"; path = "Target Support Files/Pods-UChef-UChefUITests/Pods-UChef-UChefUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B34E2E1D0BCEBEF0ADE0B98A /* Pods-UChefTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UChefTests.debug.xcconfig"; path = "Target Support Files/Pods-UChefTests/Pods-UChefTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E903044CB96147A3312A9720 /* Pods-UChef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UChef.release.xcconfig"; path = "Target Support Files/Pods-UChef/Pods-UChef.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5BCB8724C51544008379EA /* WebKit.framework in Frameworks */,
+				8AD70E02CDCCAB55E4113855 /* Pods_UChef.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B08F8FFCBBB0761B855B8738 /* Pods_UChefTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C89E2C208156A59E2D012803 /* Pods_UChef_UChefUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +119,8 @@
 				2CD9320224C1CF0E003281BE /* UChefTests */,
 				2CD9320D24C1CF0E003281BE /* UChefUITests */,
 				2CD931EA24C1CF0D003281BE /* Products */,
+				A77CDEDE033A2ABD14685159 /* Pods */,
+				31A20C8ADD4F8DD1FC7E646A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +141,18 @@
 				2CD931EE24C1CF0E003281BE /* SceneDelegate.swift */,
 				2CD931F024C1CF0E003281BE /* ViewController.swift */,
 				2CD931F224C1CF0E003281BE /* Main.storyboard */,
+				2C0842EF24C8C5A600FC5838 /* CuisnePopUpViewController.swift */,
+				2CEB97E624CA47D2004397B3 /* AddedIngredientViewController.swift */,
+				2C5BCB8424C51063008379EA /* WebViewController.swift */,
+				2C5BCB8024C50240008379EA /* InventoryTableViewController.swift */,
+				2CD3B29D24C86B2200108845 /* AddedInventoryPopUpView.swift */,
+				2C233FC324C4E45800737E1A /* RecipeTableViewController.swift */,
+				2C233FBF24C4DEB500737E1A /* RecipeTableViewCell.swift */,
+				2C233FC024C4DEB500737E1A /* RecipeTableViewCell.xib */,
 				2CD931F524C1CF0E003281BE /* Assets.xcassets */,
 				2CD931F724C1CF0E003281BE /* LaunchScreen.storyboard */,
 				2CD931FA24C1CF0E003281BE /* Info.plist */,
+				2CB91A8024C388530013941D /* GoogleService-Info.plist */,
 			);
 			path = UChef;
 			sourceTree = "<group>";
@@ -128,6 +175,30 @@
 			path = UChefUITests;
 			sourceTree = "<group>";
 		};
+		31A20C8ADD4F8DD1FC7E646A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C5BCB8624C51544008379EA /* WebKit.framework */,
+				449923F2141513D45D7B39CC /* Pods_UChef.framework */,
+				5E9341575CDDAC0910426C70 /* Pods_UChef_UChefUITests.framework */,
+				12C4C50487538A2BED2227C3 /* Pods_UChefTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A77CDEDE033A2ABD14685159 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				086467FBC1E303455CD9FC3D /* Pods-UChef.debug.xcconfig */,
+				E903044CB96147A3312A9720 /* Pods-UChef.release.xcconfig */,
+				A110458F24FECA5590C88C25 /* Pods-UChef-UChefUITests.debug.xcconfig */,
+				06783D0C3497E21CFEBB0E40 /* Pods-UChef-UChefUITests.release.xcconfig */,
+				B34E2E1D0BCEBEF0ADE0B98A /* Pods-UChefTests.debug.xcconfig */,
+				46CBCB5F28FC9F93DC743777 /* Pods-UChefTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CD9321324C1CF0F003281BE /* Build configuration list for PBXNativeTarget "UChef" */;
 			buildPhases = (
+				13AACF5D0CE3BD996F6CDE17 /* [CP] Check Pods Manifest.lock */,
 				2CD931E524C1CF0D003281BE /* Sources */,
 				2CD931E624C1CF0D003281BE /* Frameworks */,
 				2CD931E724C1CF0D003281BE /* Resources */,
+				06AB395047D78D23C207F445 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CD9321624C1CF0F003281BE /* Build configuration list for PBXNativeTarget "UChefTests" */;
 			buildPhases = (
+				50F70689D4E3EDC7889E9E87 /* [CP] Check Pods Manifest.lock */,
 				2CD931FB24C1CF0E003281BE /* Sources */,
 				2CD931FC24C1CF0E003281BE /* Frameworks */,
 				2CD931FD24C1CF0E003281BE /* Resources */,
@@ -170,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CD9321924C1CF0F003281BE /* Build configuration list for PBXNativeTarget "UChefUITests" */;
 			buildPhases = (
+				8CD1F9AD3F82A533CD55AA27 /* [CP] Check Pods Manifest.lock */,
 				2CD9320624C1CF0E003281BE /* Sources */,
 				2CD9320724C1CF0E003281BE /* Frameworks */,
 				2CD9320824C1CF0E003281BE /* Resources */,
+				E8E5E9AD451141844E2FAD00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +309,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD931F924C1CF0E003281BE /* LaunchScreen.storyboard in Resources */,
+				2CB91A8124C388530013941D /* GoogleService-Info.plist in Resources */,
 				2CD931F624C1CF0E003281BE /* Assets.xcassets in Resources */,
+				2C233FC224C4DEB500737E1A /* RecipeTableViewCell.xib in Resources */,
 				2CD931F424C1CF0E003281BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,14 +332,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06AB395047D78D23C207F445 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UChef/Pods-UChef-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UChef/Pods-UChef-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UChef/Pods-UChef-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13AACF5D0CE3BD996F6CDE17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UChef-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50F70689D4E3EDC7889E9E87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UChefTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CD1F9AD3F82A533CD55AA27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UChef-UChefUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8E5E9AD451141844E2FAD00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UChef-UChefUITests/Pods-UChef-UChefUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UChef-UChefUITests/Pods-UChef-UChefUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UChef-UChefUITests/Pods-UChef-UChefUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2CD931E524C1CF0D003281BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CEB97E724CA47D2004397B3 /* AddedIngredientViewController.swift in Sources */,
 				2CD931F124C1CF0E003281BE /* ViewController.swift in Sources */,
+				2C233FC124C4DEB500737E1A /* RecipeTableViewCell.swift in Sources */,
+				2C5BCB8124C50240008379EA /* InventoryTableViewController.swift in Sources */,
+				2C233FC424C4E45800737E1A /* RecipeTableViewController.swift in Sources */,
+				2C0842F024C8C5A600FC5838 /* CuisnePopUpViewController.swift in Sources */,
+				2C5BCB8524C51063008379EA /* WebViewController.swift in Sources */,
 				2CD931ED24C1CF0D003281BE /* AppDelegate.swift in Sources */,
 				2CD931EF24C1CF0E003281BE /* SceneDelegate.swift in Sources */,
+				2CD3B29E24C86B2200108845 /* AddedInventoryPopUpView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,10 +620,11 @@
 		};
 		2CD9321424C1CF0F003281BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 086467FBC1E303455CD9FC3D /* Pods-UChef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G4RL5TNU57;
+				DEVELOPMENT_TEAM = TD2HMKDVP3;
 				INFOPLIST_FILE = UChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,10 +639,11 @@
 		};
 		2CD9321524C1CF0F003281BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E903044CB96147A3312A9720 /* Pods-UChef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G4RL5TNU57;
+				DEVELOPMENT_TEAM = TD2HMKDVP3;
 				INFOPLIST_FILE = UChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -468,6 +658,7 @@
 		};
 		2CD9321724C1CF0F003281BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B34E2E1D0BCEBEF0ADE0B98A /* Pods-UChefTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +681,7 @@
 		};
 		2CD9321824C1CF0F003281BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46CBCB5F28FC9F93DC743777 /* Pods-UChefTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +704,7 @@
 		};
 		2CD9321A24C1CF0F003281BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A110458F24FECA5590C88C25 /* Pods-UChef-UChefUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +725,7 @@
 		};
 		2CD9321B24C1CF0F003281BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06783D0C3497E21CFEBB0E40 /* Pods-UChef-UChefUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
